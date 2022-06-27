@@ -4,15 +4,15 @@ const GET_TOURS_FROM_API = 'GET_TOURS_FROM_API';
 
 const initialState = [];
 
-const getToursAPI = () => async(dispatch) => {
+const getToursAPI = () => async (dispatch) => {
   await fetch(`${baseURL}/tours`)
-  .then((response) => response.json())
-  .then((data) => {
-    dispatch({
-      type: GET_TOURS_FROM_API,
-      payload: data,
+    .then((response) => response.json())
+    .then((data) => {
+      dispatch({
+        type: GET_TOURS_FROM_API,
+        payload: data,
+      });
     });
-  })
 };
 
 const toursReducer = (state = initialState, action) => {
@@ -23,3 +23,9 @@ const toursReducer = (state = initialState, action) => {
       return state;
   }
 };
+
+export {
+  getToursAPI,
+};
+
+export default toursReducer;
