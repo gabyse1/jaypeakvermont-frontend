@@ -6,14 +6,13 @@ import { getToursAPI } from '../redux/tours/toursReducer';
 const ToursList = () => {
   const dispatch = useDispatch();
   const toursList = useSelector((store) => store.toursReducer);
-  console.log(toursList);
 
   useEffect(() => {
     dispatch(getToursAPI());
   }, []);
 
   return (
-    <ul className="tours_list row">
+    <ul className="tours__list row">
       {
         toursList.length > 0 && toursList.map((tour) => <TourItem key={tour.id} tourItem={tour} />)
       }

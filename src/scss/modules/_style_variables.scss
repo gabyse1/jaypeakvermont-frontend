@@ -8,8 +8,9 @@ $base: #777;
 $accent: #55c57a;
 $white: #fff;
 $gray-dark: #7a7a7a;
+$gray-light: #e7e5e5;
 
-@mixin font($fs: 1rem, $fw:300, $lh:1.2rem, $ls:normal, $tt:normal) {
+@mixin font($fs: 1rem, $fw:300, $lh:normal, $ls:normal, $tt:normal) {
   font-family: $ff;
   font-size: $fs;
   font-weight: $fw;

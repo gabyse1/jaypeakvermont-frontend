@@ -13,11 +13,12 @@ const App = () => (
     <Navbar />
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/details/:name" element={<TourItemDetails />} />
+      <Route path="/tours/:name" element={<TourItemDetails />} />
       <Route path="/reservations" element={<Reservations />} />
       <Route path="/reserve" element={<Reserve />} />
       <Route path="/add" element={<AddTourItem />} />
       <Route path="/delete" element={<ToursDeleteList />} />
+      <Route path="*" element={<Home />} />
     </Routes>
   </BrowserRouter>
 );
