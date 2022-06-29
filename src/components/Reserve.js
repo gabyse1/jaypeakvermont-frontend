@@ -1,3 +1,7 @@
-const Reserve = () => (<h1>RESERVE FORM</h1>);
+const Reserve = () => (
+  <div className="section__main">
+    <h1>RESERVE ITEM COMPONENT</h1>
+  </div>
+);
 
 export default Reserve;

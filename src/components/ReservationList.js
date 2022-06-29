@@ -1,3 +1,7 @@
-const ReservationList = () => (<h1>RESERVATION LIST</h1>);
+const ReservationList = () => (
+  <div className="section__main">
+    <h1>RESERVATION LIST COMPONENT</h1>
+  </div>
+);
 
 export default ReservationList;

@@ -7,24 +7,21 @@ const TourItem = ({ tourItem }) => (
       <div className="card__picture">
         <img src={tourItem.image_url} alt={'tour image '.concat(tourItem.id)} />
       </div>
-      <h4 className="card__heading">
+      <h2 className="card__heading">
         <span className="card__heading-span">{tourItem.name}</span>
-      </h4>
+      </h2>
       <div className="card__details">
         <ul>
           <li>
-            {tourItem.duration}
-            {' '}
-            day tours
+            {`${tourItem.duration} days tour`}
           </li>
           <li>
-            Difficulty:
-            {tourItem.difficulty}
+            {'Difficulty: '.concat(tourItem.difficulty)}
           </li>
         </ul>
       </div>
+      <Link to={`/tours/${tourItem.name.replace(/ /, '-')}`} state={tourItem} className="card__link" />
     </div>
-    <Link to={`/details/${tourItem.name.replace(/ /, '-')}`} state={tourItem}>DETAILS</Link>
   </li>
 );
 

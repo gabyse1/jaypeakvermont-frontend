@@ -8,14 +8,14 @@ const TourItemDetails = () => {
   );
 
   return (
-    <div className="section__main">
-      <div className="section__main-image">
+    <div className="section__main tour__details">
+      <div className="tour__details-image">
         <img src={state.image_url} alt={'Tour photo '.concat(state.id)} />
       </div>
-      <div className="section__main-features">
-        <h2>{state.name}</h2>
-        <p>{state.description}</p>
-        <ul>
+      <div className="tour__details-features">
+        <h2 className="details__title">{state.name}</h2>
+        <p className="details__description">{state.description}</p>
+        <ul className="details__list">
           <li>
             <span>Duration:</span>
             <span>{`${state.duration} days tour`}</span>
@@ -41,10 +41,9 @@ const TourItemDetails = () => {
             <span>{setCurrencyFormat(state.price)}</span>
           </li>
         </ul>
-        <Link to="/reserve" state={state} />
-      </div>
-      <div className="section__main-options">
-        <Link to="/reserve" state={state} className="link__btn">RESERVE</Link>
+        <div className="details__options">
+          <Link to="/reserve" state={state} className="link__btn btn__reserve">RESERVE</Link>
+        </div>
       </div>
     </div>
   );
